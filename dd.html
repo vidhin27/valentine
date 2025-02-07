@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Surprise</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffccdd;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+            display: inline-block;
+        }
+        button {
+            background-color: #ff6699;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #ff3366;
+        }
+    </style>
+</head>
+<body>
+    <div id="step1" class="container">
+        <h1>Are you ready for a surprise?</h1>
+        <button onclick="nextStep('step2')">Yes</button>
+        <button onclick="nextStep('step2')">Hell Yes!</button>
+    </div>
+
+    <div id="step2" class="container" style="display: none;">
+        <h1>I love you so much and you mean so much to me! ❤️</h1>
+        <button onclick="nextStep('step3')">If you love me too, click here!</button>
+    </div>
+
+    <div id="step3" class="container" style="display: none;">
+        <h1>Happy Valentine's Day, my cutie! 💖</h1>
+    </div>
+
+    <script>
+        function nextStep(stepId) {
+            document.querySelectorAll('.container').forEach(div => div.style.display = 'none');
+            document.getElementById(stepId).style.display = 'block';
+        }
+    </script>
+    <a href="http://192.168.1.2/web1/web%202/dd.html">Click here for more surprises!</a>
+</body>
+</html>
